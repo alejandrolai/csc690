@@ -33,17 +33,23 @@ void draw(){
   int squareLength=displayWidth/5;
   int pos;
   float newY=displayHeight/2-squareLength/2;
-
+  
   for(int i=0;i<5;i++){
     pos=i+leftMostImage;
     
-    if(i+leftMostImage>=nimages){
+    if(i+leftMostImage<=nimages){
       image(images[pos],i*squareLength,newY,squareLength,squareLength);
     }
     else {
+      pos=0;
       image(images[pos],i*squareLength,newY,squareLength,squareLength);
     }
   }
+  
+
+  
+
+  
 }
 void mouseReleased()
 {
